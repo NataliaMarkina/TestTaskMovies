@@ -12,6 +12,9 @@
 		E15ABD7428229BC500CFBDF5 /* TestTaskMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD7228229BC500CFBDF5 /* TestTaskMovies.xcdatamodeld */; };
 		E15ABD7628229BC900CFBDF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15ABD7528229BC900CFBDF5 /* Assets.xcassets */; };
 		E15ABD7928229BC900CFBDF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15ABD7728229BC900CFBDF5 /* LaunchScreen.storyboard */; };
+		E15ABD8228229D9800CFBDF5 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8128229D9800CFBDF5 /* ApiManager.swift */; };
+		E15ABD8628229EA100CFBDF5 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8528229EA100CFBDF5 /* MoviesResponse.swift */; };
+		E15ABD8828229F4600CFBDF5 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8728229F4600CFBDF5 /* MovieModel.swift */; };
 		F94BCF024F12EA246E510E6B /* Pods_TestTaskMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62367D07D7AD61E58F909A /* Pods_TestTaskMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		E15ABD7528229BC900CFBDF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15ABD7828229BC900CFBDF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15ABD7A28229BC900CFBDF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E15ABD8128229D9800CFBDF5 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = ../../../../../Documents/ApiManager.swift; sourceTree = "<group>"; };
+		E15ABD8528229EA100CFBDF5 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesResponse.swift; path = ../../../../../Documents/MoviesResponse.swift; sourceTree = "<group>"; };
+		E15ABD8728229F4600CFBDF5 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieModel.swift; path = ../../../../../Documents/MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 		E15ABD6828229BC500CFBDF5 /* TestTaskMovies */ = {
 			isa = PBXGroup;
 			children = (
+				E15ABD8028229D8400CFBDF5 /* Services */,
+				E15ABD8328229E7900CFBDF5 /* Models */,
+				E15ABD8428229E8A00CFBDF5 /* Controllers */,
 				E15ABD6928229BC500CFBDF5 /* AppDelegate.swift */,
 				E15ABD6D28229BC500CFBDF5 /* MainViewController.swift */,
 				E15ABD7528229BC900CFBDF5 /* Assets.xcassets */,
@@ -78,6 +87,30 @@
 				E15ABD7228229BC500CFBDF5 /* TestTaskMovies.xcdatamodeld */,
 			);
 			path = TestTaskMovies;
+			sourceTree = "<group>";
+		};
+		E15ABD8028229D8400CFBDF5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E15ABD8128229D9800CFBDF5 /* ApiManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E15ABD8328229E7900CFBDF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E15ABD8528229EA100CFBDF5 /* MoviesResponse.swift */,
+				E15ABD8728229F4600CFBDF5 /* MovieModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E15ABD8428229E8A00CFBDF5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EF8E79A0186DEE306EDF9636 /* Frameworks */ = {
@@ -202,7 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15ABD8828229F4600CFBDF5 /* MovieModel.swift in Sources */,
+				E15ABD8228229D9800CFBDF5 /* ApiManager.swift in Sources */,
 				E15ABD6E28229BC500CFBDF5 /* MainViewController.swift in Sources */,
+				E15ABD8628229EA100CFBDF5 /* MoviesResponse.swift in Sources */,
 				E15ABD7428229BC500CFBDF5 /* TestTaskMovies.xcdatamodeld in Sources */,
 				E15ABD6A28229BC500CFBDF5 /* AppDelegate.swift in Sources */,
 			);
