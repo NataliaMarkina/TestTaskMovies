@@ -15,6 +15,9 @@
 		E15ABD8228229D9800CFBDF5 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8128229D9800CFBDF5 /* ApiManager.swift */; };
 		E15ABD8628229EA100CFBDF5 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8528229EA100CFBDF5 /* MoviesResponse.swift */; };
 		E15ABD8828229F4600CFBDF5 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8728229F4600CFBDF5 /* MovieModel.swift */; };
+		E15ABD8B2822C0AE00CFBDF5 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8A2822C0AE00CFBDF5 /* MoviesTableView.swift */; };
+		E15ABD8D2822C0C000CFBDF5 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8C2822C0C000CFBDF5 /* MoviesTableViewCell.swift */; };
+		E15ABD902822C18000CFBDF5 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = E15ABD8F2822C18000CFBDF5 /* Stevia */; };
 		F94BCF024F12EA246E510E6B /* Pods_TestTaskMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62367D07D7AD61E58F909A /* Pods_TestTaskMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,8 @@
 		E15ABD8128229D9800CFBDF5 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = ../../../../../Documents/ApiManager.swift; sourceTree = "<group>"; };
 		E15ABD8528229EA100CFBDF5 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesResponse.swift; path = ../../../../../Documents/MoviesResponse.swift; sourceTree = "<group>"; };
 		E15ABD8728229F4600CFBDF5 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieModel.swift; path = ../../../../../Documents/MovieModel.swift; sourceTree = "<group>"; };
+		E15ABD8A2822C0AE00CFBDF5 /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesTableView.swift; path = ../../../../../../Documents/MoviesTableView.swift; sourceTree = "<group>"; };
+		E15ABD8C2822C0C000CFBDF5 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesTableViewCell.swift; path = ../../../../../../Documents/MoviesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15ABD902822C18000CFBDF5 /* Stevia in Frameworks */,
 				F94BCF024F12EA246E510E6B /* Pods_TestTaskMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +86,6 @@
 				E15ABD8328229E7900CFBDF5 /* Models */,
 				E15ABD8428229E8A00CFBDF5 /* Controllers */,
 				E15ABD6928229BC500CFBDF5 /* AppDelegate.swift */,
-				E15ABD6D28229BC500CFBDF5 /* MainViewController.swift */,
 				E15ABD7528229BC900CFBDF5 /* Assets.xcassets */,
 				E15ABD7728229BC900CFBDF5 /* LaunchScreen.storyboard */,
 				E15ABD7A28229BC900CFBDF5 /* Info.plist */,
@@ -109,8 +114,19 @@
 		E15ABD8428229E8A00CFBDF5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E15ABD892822C08A00CFBDF5 /* MoviesTableView */,
+				E15ABD6D28229BC500CFBDF5 /* MainViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E15ABD892822C08A00CFBDF5 /* MoviesTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E15ABD8A2822C0AE00CFBDF5 /* MoviesTableView.swift */,
+				E15ABD8C2822C0C000CFBDF5 /* MoviesTableViewCell.swift */,
+			);
+			path = MoviesTableView;
 			sourceTree = "<group>";
 		};
 		EF8E79A0186DEE306EDF9636 /* Frameworks */ = {
@@ -139,6 +155,9 @@
 			dependencies = (
 			);
 			name = TestTaskMovies;
+			packageProductDependencies = (
+				E15ABD8F2822C18000CFBDF5 /* Stevia */,
+			);
 			productName = TestTaskMovies;
 			productReference = E15ABD6628229BC500CFBDF5 /* TestTaskMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +186,9 @@
 				Base,
 			);
 			mainGroup = E15ABD5D28229BC500CFBDF5;
+			packageReferences = (
+				E15ABD8E2822C18000CFBDF5 /* XCRemoteSwiftPackageReference "Stevia" */,
+			);
 			productRefGroup = E15ABD6728229BC500CFBDF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,8 +259,10 @@
 			files = (
 				E15ABD8828229F4600CFBDF5 /* MovieModel.swift in Sources */,
 				E15ABD8228229D9800CFBDF5 /* ApiManager.swift in Sources */,
+				E15ABD8D2822C0C000CFBDF5 /* MoviesTableViewCell.swift in Sources */,
 				E15ABD6E28229BC500CFBDF5 /* MainViewController.swift in Sources */,
 				E15ABD8628229EA100CFBDF5 /* MoviesResponse.swift in Sources */,
+				E15ABD8B2822C0AE00CFBDF5 /* MoviesTableView.swift in Sources */,
 				E15ABD7428229BC500CFBDF5 /* TestTaskMovies.xcdatamodeld in Sources */,
 				E15ABD6A28229BC500CFBDF5 /* AppDelegate.swift in Sources */,
 			);
@@ -452,6 +476,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E15ABD8E2822C18000CFBDF5 /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E15ABD8F2822C18000CFBDF5 /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E15ABD8E2822C18000CFBDF5 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E15ABD7228229BC500CFBDF5 /* TestTaskMovies.xcdatamodeld */ = {
