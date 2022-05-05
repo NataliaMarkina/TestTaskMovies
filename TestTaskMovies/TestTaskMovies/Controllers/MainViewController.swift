@@ -26,6 +26,12 @@ class MainViewController: UIViewController {
     }
 
     private func loadData() {
+        do {
+            try tableView.fetchedhResultController.performFetch()
+        } catch let error  {
+            print("ERROR: \(error)")
+        }
+
         if isEmptySavedData() {
             ApiManager.shared.getMovies { [weak self] movies in
                 guard let self = self else { return }
@@ -71,7 +77,6 @@ class MainViewController: UIViewController {
 
         do {
             try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
-            tableView.reloadData()
         } catch let error {
             print(error)
         }
