@@ -26,12 +26,21 @@ class MainViewController: UIViewController {
     }
 
     private func loadData() {
-        ApiManager.shared.getMovies { [weak self] movies in
-            guard let self = self else { return }
-            self.saveInCoreData(movies: movies)
-        } error: { error in
-            return
+        if isEmptySavedData() {
+            ApiManager.shared.getMovies { [weak self] movies in
+                guard let self = self else { return }
+                self.saveInCoreData(movies: movies)
+            } error: { error in
+                return
+            }
         }
+    }
+
+    private func isEmptySavedData() -> Bool {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        let fetchRequest = Movie.fetchRequest()
+        let objects = try? context.fetch(fetchRequest)
+        return objects?.isEmpty ?? true
     }
 
     private func createMovieEntity(movieModel: MovieModel) -> NSManagedObject? {
@@ -62,7 +71,7 @@ class MainViewController: UIViewController {
 
     private func saveInCoreData(movies: [MovieModel]?) {
         guard let movies = movies else { return }
-        _ = movies.map {createMovieEntity(movieModel: $0)}
+        _ = movies.map { createMovieEntity(movieModel: $0) }
 
         do {
             try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()

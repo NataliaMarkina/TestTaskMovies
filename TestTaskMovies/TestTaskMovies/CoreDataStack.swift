@@ -59,23 +59,3 @@ class CoreDataStack: NSObject {
         }
     }
 }
-
-extension Movie {
-    public override func awakeFromInsert() {
-        super.awakeFromInsert()
-        title = nil
-        episodeId = -1
-        openingCrawl = nil
-        director = nil
-        producer = nil
-        releaseDate = nil
-        characters = nil
-        planets = nil
-        starships = nil
-        vehicles = nil
-        species = nil
-        created = nil
-        edited = nil
-        url = nil
-    }
-}
