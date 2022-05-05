@@ -47,11 +47,7 @@ class MainViewController: UIViewController {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         if let movieEntity = NSEntityDescription.insertNewObject(forEntityName: "Movie", into: context) as? Movie {
             movieEntity.title = movieModel.title
-
-            if let id = movieModel.episodeId {
-                movieEntity.episodeId = Int32(id)
-            }
-
+            movieEntity.episodeId = Int32(movieModel.episodeId)
             movieEntity.openingCrawl = movieModel.openingCrawl
             movieEntity.director = movieModel.director
             movieEntity.producer = movieModel.producer
