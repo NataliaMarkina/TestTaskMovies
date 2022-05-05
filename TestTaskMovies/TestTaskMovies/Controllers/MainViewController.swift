@@ -6,12 +6,9 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
-
-    var movies: [MovieModel]? {
-        didSet { tableView.movies = movies }
-    }
 
     lazy var tableView = MoviesTableView(viewDelegate: self)
 
@@ -31,9 +28,47 @@ class MainViewController: UIViewController {
     private func loadData() {
         ApiManager.shared.getMovies { [weak self] movies in
             guard let self = self else { return }
-            self.movies = movies
+            self.saveInCoreData(movies: movies)
         } error: { error in
             return
+        }
+    }
+
+    private func createMovieEntity(movieModel: MovieModel) -> NSManagedObject? {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        if let movieEntity = NSEntityDescription.insertNewObject(forEntityName: "Movie", into: context) as? Movie {
+            movieEntity.title = movieModel.title
+
+            if let id = movieModel.episodeId {
+                movieEntity.episodeId = Int32(id)
+            }
+
+            movieEntity.openingCrawl = movieModel.openingCrawl
+            movieEntity.director = movieModel.director
+            movieEntity.producer = movieModel.producer
+            movieEntity.releaseDate = movieModel.releaseDate
+            movieEntity.characters = movieModel.characters
+            movieEntity.planets = movieModel.planets
+            movieEntity.starships = movieModel.starships
+            movieEntity.vehicles = movieModel.vehicles
+            movieEntity.species = movieModel.species
+            movieEntity.created = movieModel.created
+            movieEntity.edited = movieModel.edited
+            movieEntity.url = movieModel.url
+            return movieEntity
+        }
+        return nil
+    }
+
+    private func saveInCoreData(movies: [MovieModel]?) {
+        guard let movies = movies else { return }
+        _ = movies.map {createMovieEntity(movieModel: $0)}
+
+        do {
+            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+            tableView.reloadData()
+        } catch let error {
+            print(error)
         }
     }
 }

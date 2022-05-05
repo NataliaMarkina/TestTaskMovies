@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Movie" representedClassName=".Movie" syncable="YES" codeGenerationType="class">
+        <attribute name="characters" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="created" optional="YES" attributeType="String"/>
+        <attribute name="director" optional="YES" attributeType="String"/>
+        <attribute name="edited" optional="YES" attributeType="String"/>
+        <attribute name="episodeId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" customClassName="Int16?"/>
+        <attribute name="openingCrawl" optional="YES" attributeType="String"/>
+        <attribute name="planets" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="producer" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="species" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="starships" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="vehicles" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+    </entity>
+    <elements>
+        <element name="Movie" positionX="-63" positionY="-18" width="128" height="239"/>
+    </elements>
 </model>

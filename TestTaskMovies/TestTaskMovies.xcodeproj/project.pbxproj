@@ -18,6 +18,7 @@
 		E15ABD8B2822C0AE00CFBDF5 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8A2822C0AE00CFBDF5 /* MoviesTableView.swift */; };
 		E15ABD8D2822C0C000CFBDF5 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD8C2822C0C000CFBDF5 /* MoviesTableViewCell.swift */; };
 		E15ABD902822C18000CFBDF5 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = E15ABD8F2822C18000CFBDF5 /* Stevia */; };
+		E15ABD922823D78400CFBDF5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15ABD912823D78400CFBDF5 /* CoreDataStack.swift */; };
 		F94BCF024F12EA246E510E6B /* Pods_TestTaskMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62367D07D7AD61E58F909A /* Pods_TestTaskMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		E15ABD8728229F4600CFBDF5 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieModel.swift; path = ../../../../../Documents/MovieModel.swift; sourceTree = "<group>"; };
 		E15ABD8A2822C0AE00CFBDF5 /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesTableView.swift; path = ../../../../../../Documents/MoviesTableView.swift; sourceTree = "<group>"; };
 		E15ABD8C2822C0C000CFBDF5 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesTableViewCell.swift; path = ../../../../../../Documents/MoviesTableViewCell.swift; sourceTree = "<group>"; };
+		E15ABD912823D78400CFBDF5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				E15ABD8328229E7900CFBDF5 /* Models */,
 				E15ABD8428229E8A00CFBDF5 /* Controllers */,
 				E15ABD6928229BC500CFBDF5 /* AppDelegate.swift */,
+				E15ABD912823D78400CFBDF5 /* CoreDataStack.swift */,
 				E15ABD7528229BC900CFBDF5 /* Assets.xcassets */,
 				E15ABD7728229BC900CFBDF5 /* LaunchScreen.storyboard */,
 				E15ABD7A28229BC900CFBDF5 /* Info.plist */,
@@ -260,6 +263,7 @@
 				E15ABD8828229F4600CFBDF5 /* MovieModel.swift in Sources */,
 				E15ABD8228229D9800CFBDF5 /* ApiManager.swift in Sources */,
 				E15ABD8D2822C0C000CFBDF5 /* MoviesTableViewCell.swift in Sources */,
+				E15ABD922823D78400CFBDF5 /* CoreDataStack.swift in Sources */,
 				E15ABD6E28229BC500CFBDF5 /* MainViewController.swift in Sources */,
 				E15ABD8628229EA100CFBDF5 /* MoviesResponse.swift in Sources */,
 				E15ABD8B2822C0AE00CFBDF5 /* MoviesTableView.swift in Sources */,
