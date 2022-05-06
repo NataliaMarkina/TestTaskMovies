@@ -87,6 +87,7 @@
 				E15ABD8028229D8400CFBDF5 /* Services */,
 				E15ABD8328229E7900CFBDF5 /* Models */,
 				E15ABD8428229E8A00CFBDF5 /* Controllers */,
+				E15ABD93282547D300CFBDF5 /* Views */,
 				E15ABD6928229BC500CFBDF5 /* AppDelegate.swift */,
 				E15ABD912823D78400CFBDF5 /* CoreDataStack.swift */,
 				E15ABD7528229BC900CFBDF5 /* Assets.xcassets */,
@@ -117,7 +118,6 @@
 		E15ABD8428229E8A00CFBDF5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E15ABD892822C08A00CFBDF5 /* MoviesTableView */,
 				E15ABD6D28229BC500CFBDF5 /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -130,6 +130,14 @@
 				E15ABD8C2822C0C000CFBDF5 /* MoviesTableViewCell.swift */,
 			);
 			path = MoviesTableView;
+			sourceTree = "<group>";
+		};
+		E15ABD93282547D300CFBDF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E15ABD892822C08A00CFBDF5 /* MoviesTableView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EF8E79A0186DEE306EDF9636 /* Frameworks */ = {

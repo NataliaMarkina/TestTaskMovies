@@ -10,12 +10,27 @@ import CoreData
 
 class MainViewController: UIViewController {
 
+    var searchedMovies: [Movie]? {
+        didSet { tableView.searchedMovies = searchedMovies }
+    }
+
     lazy var tableView = MoviesTableView(viewDelegate: self)
+
+    lazy var searchController: UISearchController = {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.delegate = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Название фильма"
+        definesPresentationContext = true
+        return search
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        navigationItem.searchController = searchController
         setupSubviews()
         loadData()
     }
@@ -66,6 +81,7 @@ class MainViewController: UIViewController {
             movieEntity.created = movieModel.created
             movieEntity.edited = movieModel.edited
             movieEntity.url = movieModel.url
+
             return movieEntity
         }
         return nil
@@ -85,4 +101,25 @@ class MainViewController: UIViewController {
 
 extension MainViewController: MoviesTableViewDelegate {
 
+}
+
+extension MainViewController: UISearchBarDelegate, UISearchResultsUpdating, UISearchControllerDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+
+        if !searchText.isEmpty {
+            var predicate: NSPredicate = NSPredicate()
+            predicate = NSPredicate(format: "title contains[c] '\(searchText)'")
+            let managedObjectContext = CoreDataStack.sharedInstance.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Movie")
+            fetchRequest.predicate = predicate
+            do {
+                searchedMovies = try managedObjectContext.fetch(fetchRequest) as? [Movie]
+            } catch let error as NSError {
+                print("Could not fetch. \(error)")
+            }
+        } else {
+            searchedMovies = nil
+        }
+    }
 }
