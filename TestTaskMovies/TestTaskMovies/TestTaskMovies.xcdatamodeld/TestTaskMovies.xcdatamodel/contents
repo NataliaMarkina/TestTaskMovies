@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="class">
+        <attribute name="birthYear" optional="YES" attributeType="String"/>
+        <attribute name="created" optional="YES" attributeType="String"/>
+        <attribute name="edited" optional="YES" attributeType="String"/>
+        <attribute name="eyeColor" optional="YES" attributeType="String"/>
+        <attribute name="films" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="hairColor" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="homeworld" optional="YES" attributeType="String"/>
+        <attribute name="mass" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="skinColor" optional="YES" attributeType="String"/>
+        <attribute name="species" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="starships" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="vehicles" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <relationship name="ofMovie" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movie" inverseName="allCharacters" inverseEntity="Movie"/>
+    </entity>
     <entity name="Movie" representedClassName=".Movie" syncable="YES" codeGenerationType="class">
         <attribute name="characters" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
         <attribute name="created" optional="YES" attributeType="String"/>
@@ -15,8 +34,10 @@
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
         <attribute name="vehicles" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <relationship name="allCharacters" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Character" inverseName="ofMovie" inverseEntity="Character"/>
     </entity>
     <elements>
-        <element name="Movie" positionX="-63" positionY="-18" width="128" height="239"/>
+        <element name="Movie" positionX="-63" positionY="-18" width="128" height="254"/>
+        <element name="Character" positionX="-63" positionY="90" width="128" height="284"/>
     </elements>
 </model>
